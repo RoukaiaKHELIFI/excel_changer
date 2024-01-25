@@ -77,7 +77,7 @@ def main():
             modified_df.to_excel(writer, sheet_name='SDCCH Congestion', index=False)
             worst_cell.to_excel(writer, sheet_name='SDCCH Worst Cells', index=False)
             #writer.save()
-
+            writer.close()
             #modified_df.to_excel(buffer, index=False, engine='openpyxl')
             #modified_df.to_excel('modified_excel.xlsx', sheet_name='Sheet1', index=False)
             buffer.seek(0)
