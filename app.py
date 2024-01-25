@@ -37,7 +37,6 @@
 import streamlit as st
 import pandas as pd
 from io import BytesIO
-import openpyxl
 
 def modify_dataframe(df):
     df = df.dropna()
