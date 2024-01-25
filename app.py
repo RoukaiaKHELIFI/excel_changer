@@ -46,7 +46,7 @@ from io import BytesIO
 def modify_dataframe(df):
     df = df.dropna()
     df = df[df['K3001:Failed SDCCH Seizures due to Busy SDCCH'] >= 10]
-    df['result'] = df['Cell Name'].apply(lambda x: df[df['Cell Name'] == x].shape[0])
+    df['Nomber de jour Failure > 10 sur 7'] = df['Cell Name'].apply(lambda x: df[df['Cell Name'] == x].shape[0])
     df['Integrity'] = '100%'
     return df
 
