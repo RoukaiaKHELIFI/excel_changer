@@ -52,6 +52,7 @@ def modify_dataframe(df):
     return df
 def save_worst_cell(df):
     df = df[df['Nomber de jour Failure > 10 sur 7']>= 5 ].sort_values(by = 'K3001:Failed SDCCH Seizures due to Busy SDCCH', ascending=False).drop_duplicates('Cell Name')
+    return df
 def main():
     st.title("Excel Sheet Support")
     st.write("""This app is a support of excel sheet modifications and information extraction, you have to upload an excel sheet that has these kind of columns : 'Cell Name',
