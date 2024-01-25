@@ -72,7 +72,7 @@ def main():
             buffer = BytesIO()
             worst_cell = save_worst_cell(modified_df)
             # save in a excel the first sheet has modified_df and the second has worst_cell with the name sheet1 and sheet2
-            writer = pd.ExcelWriter(buffer, engine='xlsxwriter')
+            writer = pd.ExcelWriter(buffer, engine='openpyxl')
             modified_df.to_excel(writer, sheet_name='SDCCH Congestion', index=False)
             worst_cell.to_excel(writer, sheet_name='SDCCH Worst Cells', index=False)
             writer.save()
