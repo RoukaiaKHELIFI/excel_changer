@@ -51,7 +51,7 @@ def modify_dataframe(df):
     return df
 
 def main():
-    st.title("Excel Sheet Modifier")
+    st.title("Excel Sheet Support")
     uploaded_file = st.file_uploader("Upload Excel file", type=["xlsx", "xls"])
 
     if uploaded_file is not None:
@@ -71,6 +71,7 @@ def main():
 
         except Exception as e:
             st.error(f"Error: {e}")
-
+    st.link_button('Email Support','https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMmVfqrkGHslNKWWgMvKPPDhXmSGxWNkCkCWsztBWXJNzvTNcsJJDpLncMXPkrHWGMnzRtV')
+    
 if __name__ == "__main__":
     main()
