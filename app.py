@@ -64,7 +64,7 @@ def main():
             st.dataframe(modified_df)
             buffer = BytesIO()
 
-            modified_df.to_excel(buffer, index=False, engine='xlsxwriter')
+            modified_df.to_excel(buffer, index=False, engine='openpyxl')
             #modified_df.to_excel('modified_excel.xlsx', sheet_name='Sheet1', index=False)
             buffer.seek(0)
             st.download_button(
