@@ -52,6 +52,11 @@ def modify_dataframe(df):
 
 def main():
     st.title("Excel Sheet Support")
+    st.write("""This app is a support of excel sheet modifications and information extraction, you have to upload an excel sheet that has these kind of columns : 'Cell Name',
+              'K3001:Failed SDCCH Seizures due to Busy SDCCH', 'Date'
+     just like the content of this excel sheet'
+             """)
+    st.image('example.png', width=700)
     uploaded_file = st.file_uploader("Upload Excel file", type=["xlsx", "xls"])
 
     if uploaded_file is not None:
