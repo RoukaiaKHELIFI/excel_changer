@@ -57,10 +57,15 @@ def main():
     if uploaded_file is not None:
         try:
             df = pd.read_excel(uploaded_file)
+            df = df.to_csv('csvfile.csv', encoding='utf-8', index=False)
+            df = pd.read_csv('csvfile.csv')
+
             modified_df = modify_dataframe(df)
             st.dataframe(modified_df)
             buffer = BytesIO()
+
             modified_df.to_excel(buffer, index=False, engine='xlsxwriter')
+            #modified_df.to_excel('modified_excel.xlsx', sheet_name='Sheet1', index=False)
             buffer.seek(0)
             st.download_button(
                     label="Download Excel File",
