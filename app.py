@@ -48,7 +48,7 @@ def modify_dataframe(df):
     df = df[df['K3001:Failed SDCCH Seizures due to Busy SDCCH'] >= 10]
     df['Nomber de jour Failure > 10 sur 7'] = df['Cell Name'].apply(lambda x: df[df['Cell Name'] == x].shape[0])
     df['Integrity'] = '100%'
-    df[df['result']>= 5 ].sort_values(by = 'K3001:Failed SDCCH Seizures due to Busy SDCCH', ascending=False).drop_duplicates('Cell Name')
+    df[df['Nomber de jour Failure > 10 sur 7']>= 5 ].sort_values(by = 'K3001:Failed SDCCH Seizures due to Busy SDCCH', ascending=False).drop_duplicates('Cell Name')
     return df
 
 def main():
