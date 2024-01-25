@@ -76,7 +76,7 @@ def main():
 
         except Exception as e:
             st.error(f"Error: {e}")
-    st.link_button('Email Support','https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMmVfqrkGHslNKWWgMvKPPDhXmSGxWNkCkCWsztBWXJNzvTNcsJJDpLncMXPkrHWGMnzRtV')
+    st.link_button('Email Me!','https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMmVfqrkGHslNKWWgMvKPPDhXmSGxWNkCkCWsztBWXJNzvTNcsJJDpLncMXPkrHWGMnzRtV')
     
 if __name__ == "__main__":
     main()
